@@ -246,7 +246,7 @@ python -m pytest --cov=app tests/
 
 ### **Bei Fragen:**
 - Erstellen Sie ein GitHub Issue
-- Schreiben Sie eine E-Mail an abdullah.koc@ak-systems.de
+- Schreiben Sie eine E-Mail an ak@ak-pro.com
 - Nutzen Sie GitHub Discussions
 - Treten Sie unserem Discord bei (geplant)
 

@@ -255,4 +255,4 @@ Bei Fragen oder Problemen:
 
 ---
 
-**Entwickelt mit ❤️ von A. Koc (AK Systems) für die KI-Community** 
+**Entwickelt mit ❤️ von A. Koc (AK Pro) für die KI-Community** 

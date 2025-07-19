@@ -31,7 +31,7 @@ Projektbetreuer sind verantwortlich für die Klärung der Standards für akzepta
 ## 📞 **Melden von Problemen**
 
 ### **Wie Sie melden können:**
-- **E-Mail:** abdullah.koc@ak-systems.de
+- **E-Mail:** ak@ak-pro.com
 - **GitHub:** Erstellen Sie ein privates Issue
 - **Discord:** Direktnachricht an Moderatoren (geplant)
 
@@ -87,8 +87,8 @@ Dieser Code of Conduct kann von Zeit zu Zeit aktualisiert werden. Änderungen we
 ## 📞 **Kontakt**
 
 ### **Projektleiter**
-- **A. Koc (AK Systems)**
-- **E-Mail:** abdullah.koc@ak-systems.de
+- **A. Koc (AK Pro)**
+- **E-Mail:** ak@ak-pro.com
 - **GitHub:** [@ak-hosting](https://github.com/ak-hosting/)
 
 ### **Moderatoren (geplant)**
