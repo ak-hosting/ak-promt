@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}Newsletter - AI Guide{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="h3 mb-0">
+                        <i class="bi bi-envelope me-2"></i>Newsletter
+                    </h1>
+                </div>
+                <div class="card-body p-5">
+                    <div class="text-center mb-5">
+                        <i class="bi bi-megaphone display-1 text-primary mb-4"></i>
+                        <h2>Bleiben Sie auf dem Laufenden!</h2>
+                        <p class="lead">
+                            Erhalten Sie die neuesten Updates zu Prompt Engineering, 
+                            KI-Entwicklungen und exklusive Inhalte direkt in Ihr Postfach.
+                        </p>
+                    </div>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="bi bi-lightbulb text-warning fs-1 mb-3"></i>
+                                <h5>Exklusive Prompts</h5>
+                                <p class="text-muted">Neue, getestete Prompts für verschiedene Anwendungsfälle</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="bi bi-graph-up text-success fs-1 mb-3"></i>
+                                <h5>KI-Trends</h5>
+                                <p class="text-muted">Die neuesten Entwicklungen im KI-Bereich</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="bi bi-tools text-info fs-1 mb-3"></i>
+                                <h5>Tools & Tipps</h5>
+                                <p class="text-muted">Praktische Tools und Expertentipps</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="newsletter-form" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">Vorname *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                                <div class="invalid-feedback">
+                                    Bitte geben Sie Ihren Vornamen ein.
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Nachname *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                                <div class="invalid-feedback">
+                                    Bitte geben Sie Ihren Nachnamen ein.
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="email" class="form-label">E-Mail-Adresse *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">
+                                    Bitte geben Sie eine gültige E-Mail-Adresse ein.
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label class="form-label">Interessengebiete</label>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="content-creation" value="content-creation">
+                                            <label class="form-check-label" for="content-creation">
+                                                Content Creation
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="programming" value="programming">
+                                            <label class="form-check-label" for="programming">
+                                                Programming & Development
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="business" value="business">
+                                            <label class="form-check-label" for="business">
+                                                Business & Strategy
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="education" value="education">
+                                            <label class="form-check-label" for="education">
+                                                Education & Learning
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        Ich stimme der <a href="#" class="text-decoration-none">Datenschutzerklärung</a> zu *
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Sie müssen der Datenschutzerklärung zustimmen.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="bi bi-envelope me-2"></i>Newsletter abonnieren
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="mt-4 text-center">
+                        <small class="text-muted">
+                            <i class="bi bi-shield-check me-1"></i>
+                            Ihre Daten sind sicher. Abmeldung jederzeit möglich.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    if (this.checkValidity()) {
+        // Newsletter-Anmeldung simulieren
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+        
+        // Analytics Tracking
+        if (window.Analytics) {
+            window.Analytics.trackEvent('newsletter_signup', {
+                email: data.email,
+                interests: Array.from(this.querySelectorAll('input[type="checkbox"]:checked'))
+                    .map(cb => cb.value)
+            });
+        }
+        
+        // Erfolgsmeldung
+        alert('Vielen Dank für Ihre Anmeldung! Sie erhalten in Kürze eine Bestätigungs-E-Mail.');
+        this.reset();
+    } else {
+        e.stopPropagation();
+    }
+    
+    this.classList.add('was-validated');
+});
+</script>
+{% endblock %} 

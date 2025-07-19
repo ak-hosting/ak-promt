@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Prompt Engineering Guide{% endblock %}</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Umfassender Leitfaden zur optimalen Prompt-Formulierung für KI-Modelle">
+    <meta name="keywords" content="Prompt Engineering, KI, AI, Machine Learning, ChatGPT, Gemini, Claude">
+    <meta name="author" content="Prompt Engineering Guide">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Guide - Prompt Engineering Guide">
+    <meta property="og:description" content="Umfassender Leitfaden zur optimalen Prompt-Formulierung für KI-Modelle. Lernen Sie, wie Sie das volle Potenzial von ChatGPT, Gemini, Claude und anderen KI-Systemen ausschöpfen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:image" content="https://ai-guide.ak-pro.com/static/images/og-image.png">
+    <meta property="og:site_name" content="AI Guide by AK Systems">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Guide - Prompt Engineering Guide">
+    <meta name="twitter:description" content="Umfassender Leitfaden zur optimalen Prompt-Formulierung für KI-Modelle">
+    <meta name="twitter:image" content="https://ai-guide.ak-pro.com/static/images/twitter-card.png">
+    
+    <!-- LinkedIn -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">
+                <i class="bi bi-robot me-2"></i>Prompt Engineering Guide
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'grundlagen' %}active{% endif %}" href="{{ url_for('grundlagen') }}">
+                            <i class="bi bi-book me-1"></i>Grundlagen
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'techniken' %}active{% endif %}" href="{{ url_for('techniken') }}">
+                            <i class="bi bi-gear me-1"></i>Techniken
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'anwendungen' %}active{% endif %}" href="{{ url_for('anwendungen') }}">
+                            <i class="bi bi-lightbulb me-1"></i>Anwendungen
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'plattformen' %}active{% endif %}" href="{{ url_for('plattformen') }}">
+                            <i class="bi bi-cpu me-1"></i>Plattformen
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'best-practices' %}active{% endif %}" href="{{ url_for('best_practices') }}">
+                            <i class="bi bi-check-circle me-1"></i>Best Practices
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'beispiele' %}active{% endif %}" href="{{ url_for('beispiele') }}">
+                            <i class="bi bi-code-slash me-1"></i>Beispiele
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active_page == 'fazit' %}active{% endif %}" href="{{ url_for('fazit') }}">
+                            <i class="bi bi-flag me-1"></i>Fazit
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">
+                            <i class="bi bi-info-circle me-1"></i>Über uns
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">
+                            <i class="bi bi-envelope me-1"></i>Kontakt
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mt-5 pt-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-robot me-2"></i>Prompt Engineering Guide</h5>
+                    <p class="mb-0">Umfassender Leitfaden zur optimalen Prompt-Formulierung für KI-Modelle</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <i class="bi bi-calendar me-1"></i>© 2024 Prompt Engineering Guide
+                    </p>
+                    <p class="mb-0">
+                        <i class="bi bi-github me-1"></i>
+                        <a href="#" class="text-light text-decoration-none">GitHub</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="{{ url_for('manifest') }}">
+    <meta name="theme-color" content="#0d6efd">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="AI Guide">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-152x152.png') }}">
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html> 

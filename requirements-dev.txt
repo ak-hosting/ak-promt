@@ -1,0 +1,13 @@
+# Development & Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-flask==1.3.0
+black==23.11.0
+flake8==6.1.0
+bandit==1.7.5
+
+# Monitoring & Logging
+sentry-sdk[flask]==1.38.0
+
+# Security (for development)
+cryptography>=42.0.0 

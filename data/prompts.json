@@ -1,0 +1,169 @@
+{
+  "prompts": [
+    {
+      "id": "content-writer-001",
+      "title": "Content Writer für Blog-Artikel",
+      "description": "Ein professioneller Content Writer, der SEO-optimierte Blog-Artikel erstellt",
+      "category": "content-creation",
+      "subcategory": "blog-writing",
+      "platform": ["gpt4", "claude", "gemini"],
+      "prompt": "Du bist ein erfahrener Content Writer und SEO-Experte. Erstelle einen detaillierten, informativen Blog-Artikel zum Thema '{topic}'. Der Artikel sollte:\n\n- Mindestens 1500 Wörter haben\n- SEO-optimiert sein mit relevanten Keywords\n- Eine klare Struktur mit H2/H3 Überschriften haben\n- Praktische Beispiele und Tipps enthalten\n- Eine Call-to-Action am Ende haben\n- Professionell und leicht verständlich geschrieben sein\n\nFormat: HTML mit Markdown-Unterstützung",
+      "example_output": "Ein vollständiger Blog-Artikel mit Einleitung, Hauptteil, praktischen Beispielen und Schlussfolgerung",
+      "tags": ["content", "seo", "blog", "writing"],
+      "author": "A. Koc",
+      "rating": 4.8,
+      "usage_count": 156,
+      "created_date": "2024-01-15",
+      "last_updated": "2024-01-20",
+      "difficulty": "intermediate",
+      "estimated_time": "10-15 minutes"
+    },
+    {
+      "id": "code-reviewer-001",
+      "title": "Code Reviewer & Debugger",
+      "description": "Ein erfahrener Software-Entwickler, der Code analysiert und Verbesserungen vorschlägt",
+      "category": "programming",
+      "subcategory": "code-review",
+      "platform": ["gpt4", "claude"],
+      "prompt": "Du bist ein Senior Software-Entwickler mit 10+ Jahren Erfahrung. Analysiere den folgenden Code und gib detailliertes Feedback:\n\n```{language}\n{code}\n```\n\nBitte bewerte:\n1. Code-Qualität und Lesbarkeit\n2. Performance-Optimierungen\n3. Sicherheitsaspekte\n4. Best Practices\n5. Mögliche Bugs oder Probleme\n6. Verbesserungsvorschläge\n\nGib auch ein verbessertes Code-Beispiel.",
+      "example_output": "Detaillierte Code-Analyse mit spezifischen Verbesserungsvorschlägen und optimiertem Code",
+      "tags": ["programming", "code-review", "debugging", "best-practices"],
+      "author": "A. Koc",
+      "rating": 4.9,
+      "usage_count": 89,
+      "created_date": "2024-01-10",
+      "last_updated": "2024-01-18",
+      "difficulty": "advanced",
+      "estimated_time": "5-10 minutes"
+    },
+    {
+      "id": "marketing-strategist-001",
+      "title": "Marketing-Strategist",
+      "description": "Ein erfahrener Marketing-Experte, der umfassende Marketing-Strategien entwickelt",
+      "category": "business",
+      "subcategory": "marketing",
+      "platform": ["gpt4", "claude", "gemini"],
+      "prompt": "Du bist ein erfahrener Marketing-Strategist mit 15+ Jahren Erfahrung. Entwickle eine umfassende Marketing-Strategie für '{product/service}' im '{industry}' Bereich.\n\nBerücksichtige:\n- Zielgruppen-Analyse\n- Wettbewerbsanalyse\n- Marketing-Mix (4Ps)\n- Digitale Marketing-Kanäle\n- Content-Strategie\n- Budget-Planung\n- KPIs und Erfolgsmessung\n- Timeline und Meilensteine\n\nErstelle eine strukturierte, ausführbare Marketing-Strategie.",
+      "example_output": "Vollständige Marketing-Strategie mit allen Komponenten, Timeline und Budget-Planung",
+      "tags": ["marketing", "strategy", "business", "planning"],
+      "author": "A. Koc",
+      "rating": 4.7,
+      "usage_count": 234,
+      "created_date": "2024-01-12",
+      "last_updated": "2024-01-25",
+      "difficulty": "advanced",
+      "estimated_time": "15-20 minutes"
+    },
+    {
+      "id": "language-tutor-001",
+      "title": "Sprachlehrer & Übersetzer",
+      "description": "Ein geduldiger Sprachlehrer, der beim Lernen und Übersetzen hilft",
+      "category": "education",
+      "subcategory": "language-learning",
+      "platform": ["gpt4", "claude", "gemini"],
+      "prompt": "Du bist ein erfahrener Sprachlehrer für '{target_language}'. Hilf mir beim Lernen und Übersetzen.\n\nAufgabe: {task}\n\nBitte:\n1. Erkläre die Grammatik-Regeln\n2. Gib praktische Beispiele\n3. Zeige häufige Fehler und wie man sie vermeidet\n4. Biete Übungsaufgaben an\n5. Erkläre kulturelle Kontexte\n\nSei geduldig und ermutigend in deinen Erklärungen.",
+      "example_output": "Detaillierte Sprachlern-Hilfe mit Grammatik-Erklärungen, Beispielen und Übungen",
+      "tags": ["education", "language", "translation", "learning"],
+      "author": "A. Koc",
+      "rating": 4.6,
+      "usage_count": 445,
+      "created_date": "2024-01-08",
+      "last_updated": "2024-01-22",
+      "difficulty": "beginner",
+      "estimated_time": "5-15 minutes"
+    },
+    {
+      "id": "data-analyst-001",
+      "title": "Datenanalyst & Visualisierer",
+      "description": "Ein erfahrener Datenanalyst, der Daten interpretiert und visualisiert",
+      "category": "data-science",
+      "subcategory": "data-analysis",
+      "platform": ["gpt4", "claude"],
+      "prompt": "Du bist ein Senior Data Analyst mit Expertise in Python, R und SQL. Analysiere die folgenden Daten:\n\n{data_description}\n\nBitte führe aus:\n1. Exploratory Data Analysis (EDA)\n2. Statistische Analyse\n3. Datenvisualisierung-Vorschläge\n4. Insights und Erkenntnisse\n5. Empfehlungen für weitere Analysen\n\nVerwende Python-Code für die Analyse und Visualisierung.",
+      "example_output": "Umfassende Datenanalyse mit Code, Visualisierungen und Erkenntnissen",
+      "tags": ["data-science", "analysis", "visualization", "python"],
+      "author": "A. Koc",
+      "rating": 4.8,
+      "usage_count": 123,
+      "created_date": "2024-01-14",
+      "last_updated": "2024-01-19",
+      "difficulty": "advanced",
+      "estimated_time": "10-20 minutes"
+    }
+  ],
+  "categories": [
+    {
+      "id": "content-creation",
+      "name": "Content Creation",
+      "description": "Prompts für Content-Erstellung, Schreiben und Kreativität",
+      "subcategories": ["blog-writing", "social-media", "copywriting", "creative-writing"]
+    },
+    {
+      "id": "programming",
+      "name": "Programming & Development",
+      "description": "Prompts für Software-Entwicklung, Code-Review und Debugging",
+      "subcategories": ["code-review", "debugging", "architecture", "testing"]
+    },
+    {
+      "id": "business",
+      "name": "Business & Strategy",
+      "description": "Prompts für Geschäftsstrategien, Marketing und Planung",
+      "subcategories": ["marketing", "strategy", "planning", "analysis"]
+    },
+    {
+      "id": "education",
+      "name": "Education & Learning",
+      "description": "Prompts für Bildung, Lernen und Wissensvermittlung",
+      "subcategories": ["language-learning", "tutoring", "research", "presentation"]
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science & Analytics",
+      "description": "Prompts für Datenanalyse, Visualisierung und Machine Learning",
+      "subcategories": ["data-analysis", "visualization", "ml", "statistics"]
+    }
+  ],
+  "platforms": [
+    {
+      "id": "gpt4",
+      "name": "OpenAI GPT-4",
+      "description": "OpenAI's fortschrittlichstes Sprachmodell",
+      "strengths": ["Kreativität", "Komplexe Aufgaben", "Code-Generierung"],
+      "limitations": ["Token-Limit", "Kosten"]
+    },
+    {
+      "id": "claude",
+      "name": "Anthropic Claude",
+      "description": "Anthropic's Claude-Modell mit Fokus auf Sicherheit",
+      "strengths": ["Sicherheit", "Analyse", "Ethische Überlegungen"],
+      "limitations": ["Kreativität", "Code-Generierung"]
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini",
+      "description": "Google's multimodales KI-Modell",
+      "strengths": ["Multimodal", "Integration", "Google-Services"],
+      "limitations": ["Verfügbarkeit", "API-Zugang"]
+    }
+  ],
+  "difficulty_levels": [
+    {
+      "id": "beginner",
+      "name": "Anfänger",
+      "description": "Einfache Prompts für Einsteiger",
+      "characteristics": ["Klar strukturiert", "Viele Beispiele", "Schritt-für-Schritt"]
+    },
+    {
+      "id": "intermediate",
+      "name": "Fortgeschritten",
+      "description": "Mittelschwere Prompts für erfahrene Nutzer",
+      "characteristics": ["Komplexere Aufgaben", "Weniger Beispiele", "Mehr Flexibilität"]
+    },
+    {
+      "id": "advanced",
+      "name": "Experte",
+      "description": "Komplexe Prompts für Experten",
+      "characteristics": ["Hohe Komplexität", "Minimale Anleitung", "Maximale Flexibilität"]
+    }
+  ]
+} 

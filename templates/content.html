@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - Prompt Engineering Guide{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <!-- Sidebar Navigation -->
+        <div class="col-lg-3 d-none d-lg-block">
+            <div class="position-sticky" style="top: 100px;">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-list me-2"></i>Inhaltsverzeichnis</h5>
+                    </div>
+                    <div class="card-body">
+                        <nav class="nav flex-column">
+                            <a class="nav-link" href="{{ url_for('grundlagen') }}">
+                                <i class="bi bi-book me-2"></i>Grundlagen
+                            </a>
+                            <a class="nav-link" href="{{ url_for('techniken') }}">
+                                <i class="bi bi-gear me-2"></i>Techniken
+                            </a>
+                            <a class="nav-link" href="{{ url_for('anwendungen') }}">
+                                <i class="bi bi-lightbulb me-2"></i>Anwendungen
+                            </a>
+                            <a class="nav-link" href="{{ url_for('plattformen') }}">
+                                <i class="bi bi-cpu me-2"></i>Plattformen
+                            </a>
+                            <a class="nav-link" href="{{ url_for('best_practices') }}">
+                                <i class="bi bi-check-circle me-2"></i>Best Practices
+                            </a>
+                            <a class="nav-link" href="{{ url_for('beispiele') }}">
+                                <i class="bi bi-code-slash me-2"></i>Beispiele
+                            </a>
+                            <a class="nav-link" href="{{ url_for('fazit') }}">
+                                <i class="bi bi-flag me-2"></i>Fazit
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="card border-0 shadow-sm mt-3">
+                    <div class="card-header bg-success text-white">
+                        <h6 class="mb-0"><i class="bi bi-lightning me-2"></i>Schnellaktionen</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="{{ url_for('beispiele') }}" class="btn btn-outline-success btn-sm">
+                                <i class="bi bi-code-slash me-1"></i>Templates ansehen
+                            </a>
+                            <a href="{{ url_for('plattformen') }}" class="btn btn-outline-info btn-sm">
+                                <i class="bi bi-cpu me-1"></i>Plattform-Vergleich
+                            </a>
+                            <a href="{{ url_for('best_practices') }}" class="btn btn-outline-warning btn-sm">
+                                <i class="bi bi-check-circle me-1"></i>Best Practices
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="col-lg-9">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="h3 mb-0">
+                        <i class="bi bi-book me-2"></i>{{ title }}
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <div class="content-markdown">
+                        {{ content | safe }}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="row mt-4">
+                <div class="col-6">
+                    {% if active_page == 'grundlagen' %}
+                        <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>Zurück zur Startseite
+                        </a>
+                    {% elif active_page == 'techniken' %}
+                        <a href="{{ url_for('grundlagen') }}" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>Grundlagen
+                        </a>
+                    {% elif active_page == 'anwendungen' %}
+                        <a href="{{ url_for('techniken') }}" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>Techniken
+                        </a>
+                    {% elif active_page == 'plattformen' %}
+                        <a href="{{ url_for('anwendungen') }}" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>Anwendungen
+                        </a>
+                    {% elif active_page == 'best-practices' %}
+                        <a href="{{ url_for('plattformen') }}" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>Plattformen
+                        </a>
+                    {% elif active_page == 'beispiele' %}
+                        <a href="{{ url_for('best_practices') }}" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>Best Practices
+                        </a>
+                    {% elif active_page == 'fazit' %}
+                        <a href="{{ url_for('beispiele') }}" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>Beispiele
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="col-6 text-end">
+                    {% if active_page == 'grundlagen' %}
+                        <a href="{{ url_for('techniken') }}" class="btn btn-primary">
+                            Techniken<i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    {% elif active_page == 'techniken' %}
+                        <a href="{{ url_for('anwendungen') }}" class="btn btn-primary">
+                            Anwendungen<i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    {% elif active_page == 'anwendungen' %}
+                        <a href="{{ url_for('plattformen') }}" class="btn btn-primary">
+                            Plattformen<i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    {% elif active_page == 'plattformen' %}
+                        <a href="{{ url_for('best_practices') }}" class="btn btn-primary">
+                            Best Practices<i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    {% elif active_page == 'best-practices' %}
+                        <a href="{{ url_for('beispiele') }}" class="btn btn-primary">
+                            Beispiele<i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    {% elif active_page == 'beispiele' %}
+                        <a href="{{ url_for('fazit') }}" class="btn btn-primary">
+                            Fazit<i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    {% elif active_page == 'fazit' %}
+                        <a href="{{ url_for('index') }}" class="btn btn-primary">
+                            Startseite<i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Related Content -->
+            <div class="card border-0 shadow-sm mt-4">
+                <div class="card-header bg-light">
+                    <h6 class="mb-0"><i class="bi bi-link-45deg me-2"></i>Verwandte Inhalte</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-code-slash text-primary me-2"></i>
+                                <a href="{{ url_for('beispiele') }}" class="text-decoration-none">Praktische Beispiele</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-cpu text-info me-2"></i>
+                                <a href="{{ url_for('plattformen') }}" class="text-decoration-none">Plattform-Optimierung</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <a href="{{ url_for('best_practices') }}" class="text-decoration-none">Best Practices</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

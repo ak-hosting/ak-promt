@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block title %}Kontakt - Prompt Engineering Guide{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="h3 mb-0">
+                        <i class="bi bi-envelope me-2"></i>Kontakt
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Kontaktieren Sie uns</h3>
+                            <p class="lead">
+                                Haben Sie Fragen, Anregungen oder Feedback zum Prompt Engineering Guide?
+                            </p>
+                            <p>
+                                Wir freuen uns über Ihre Nachricht und werden uns schnellstmöglich bei Ihnen melden.
+                            </p>
+                            
+                            <div class="mt-4">
+                                <h5><i class="bi bi-geo-alt me-2"></i>Kontaktinformationen</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="bi bi-envelope me-2"></i>
+                                        <a href="mailto:info@prompt-engineering-guide.de" class="text-decoration-none">
+                                            info@prompt-engineering-guide.de
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-github me-2"></i>
+                                        <a href="#" class="text-decoration-none">GitHub Repository</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-linkedin me-2"></i>
+                                        <a href="#" class="text-decoration-none">LinkedIn</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-Mail *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Betreff</label>
+                                    <select class="form-select" id="subject">
+                                        <option value="">Bitte wählen...</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="question">Frage</option>
+                                        <option value="suggestion">Anregung</option>
+                                        <option value="bug">Fehler melden</option>
+                                        <option value="other">Sonstiges</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Nachricht *</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        Ich stimme der <a href="#" class="text-decoration-none">Datenschutzerklärung</a> zu *
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-send me-2"></i>Nachricht senden
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <h3><i class="bi bi-question-circle me-2"></i>Häufig gestellte Fragen</h3>
+                            <div class="accordion" id="faqAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                            Ist der Prompt Engineering Guide kostenlos?
+                                        </button>
+                                    </h2>
+                                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Ja, der Prompt Engineering Guide ist vollständig kostenlos und Open Source. 
+                                            Sie können alle Inhalte frei nutzen und weitergeben.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                            Welche KI-Plattformen werden unterstützt?
+                                        </button>
+                                    </h2>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Der Guide unterstützt alle führenden KI-Plattformen: Google Gemini, OpenAI GPT, 
+                                            Anthropic Claude, DeepSeek, Grok (xAI), Meta LLaMA und Microsoft Copilot.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                            Kann ich zum Projekt beitragen?
+                                        </button>
+                                    </h2>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Ja, wir freuen uns über Beiträge! Das Projekt ist Open Source und auf GitHub verfügbar. 
+                                            Sie können Issues melden, Pull Requests erstellen oder neue Inhalte vorschlagen.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                            Wie oft wird der Guide aktualisiert?
+                                        </button>
+                                    </h2>
+                                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Der Guide wird regelmäßig aktualisiert, um neue Entwicklungen im Bereich 
+                                            des Prompt Engineering und neue KI-Modelle zu berücksichtigen.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

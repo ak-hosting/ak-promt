@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Prompt Engineering Guide - Startseite{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    <i class="bi bi-robot me-3"></i>Prompt Engineering Guide
+                </h1>
+                <p class="lead mb-4">
+                    Der umfassende Leitfaden zur optimalen Prompt-Formulierung für alle führenden KI-Modelle. 
+                    Lernen Sie, wie Sie das volle Potenzial von ChatGPT, Gemini, Claude und anderen KI-Systemen ausschöpfen.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="{{ url_for('grundlagen') }}" class="btn btn-light btn-lg">
+                        <i class="bi bi-book me-2"></i>Grundlagen lernen
+                    </a>
+                    <a href="{{ url_for('beispiele') }}" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-code-slash me-2"></i>Beispiele ansehen
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" 
+                     alt="KI und Prompt Engineering" 
+                     class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">Was Sie lernen werden</h2>
+                <p class="lead text-muted">Von Grundlagen bis zu fortgeschrittenen Techniken</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="bi bi-book fs-3"></i>
+                        </div>
+                        <h5 class="card-title">Grundlegende Prinzipien</h5>
+                        <p class="card-text text-muted">
+                            Lernen Sie die fundamentalen Prinzipien des Prompt Engineering: Klarheit, Spezifität, Kontext und Format.
+                        </p>
+                        <a href="{{ url_for('grundlagen') }}" class="btn btn-outline-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="bi bi-gear fs-3"></i>
+                        </div>
+                        <h5 class="card-title">Fortgeschrittene Techniken</h5>
+                        <p class="card-text text-muted">
+                            Entdecken Sie Rollenspiel, Few-Shot Learning, Chain-of-Thought und andere fortgeschrittene Methoden.
+                        </p>
+                        <a href="{{ url_for('techniken') }}" class="btn btn-outline-success">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="bi bi-cpu fs-3"></i>
+                        </div>
+                        <h5 class="card-title">Plattform-Optimierung</h5>
+                        <p class="card-text text-muted">
+                            Spezifische Anpassungen für ChatGPT, Gemini, Claude, DeepSeek, Grok und andere KI-Modelle.
+                        </p>
+                        <a href="{{ url_for('plattformen') }}" class="btn btn-outline-info">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="bi bi-code-slash fs-3"></i>
+                        </div>
+                        <h5 class="card-title">Praktische Beispiele</h5>
+                        <p class="card-text text-muted">
+                            Konkrete Templates und Beispiele für verschiedene Anwendungsfälle und Aufgaben.
+                        </p>
+                        <a href="{{ url_for('beispiele') }}" class="btn btn-outline-warning">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Supported Platforms Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-6 fw-bold mb-3">Unterstützte KI-Plattformen</h2>
+                <p class="lead text-muted">Optimiert für alle führenden KI-Modelle</p>
+            </div>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-2 col-4 text-center">
+                <div class="platform-card p-3">
+                    <i class="bi bi-google fs-1 text-primary mb-2"></i>
+                    <h6>Google Gemini</h6>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center">
+                <div class="platform-card p-3">
+                    <i class="bi bi-chat-dots fs-1 text-success mb-2"></i>
+                    <h6>OpenAI GPT</h6>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center">
+                <div class="platform-card p-3">
+                    <i class="bi bi-shield-check fs-1 text-info mb-2"></i>
+                    <h6>Anthropic Claude</h6>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center">
+                <div class="platform-card p-3">
+                    <i class="bi bi-code-square fs-1 text-warning mb-2"></i>
+                    <h6>DeepSeek</h6>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center">
+                <div class="platform-card p-3">
+                    <i class="bi bi-lightning fs-1 text-danger mb-2"></i>
+                    <h6>Grok (xAI)</h6>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center">
+                <div class="platform-card p-3">
+                    <i class="bi bi-microsoft fs-1 text-primary mb-2"></i>
+                    <h6>Microsoft Copilot</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Start Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-6 fw-bold mb-4">Schnellstart</h2>
+                <p class="lead mb-5">
+                    Beginnen Sie Ihre Reise ins Prompt Engineering mit unseren strukturierten Lernpfaden
+                </p>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 40px; height: 40px;">
+                                    <span class="fw-bold">1</span>
+                                </div>
+                                <h5>Grundlagen verstehen</h5>
+                                <p class="text-muted">Lernen Sie die fundamentalen Prinzipien des Prompt Engineering</p>
+                                <a href="{{ url_for('grundlagen') }}" class="btn btn-primary">Start</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="step-number bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 40px; height: 40px;">
+                                    <span class="fw-bold">2</span>
+                                </div>
+                                <h5>Techniken erlernen</h5>
+                                <p class="text-muted">Entdecken Sie fortgeschrittene Prompting-Techniken</p>
+                                <a href="{{ url_for('techniken') }}" class="btn btn-success">Weiter</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="step-number bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 40px; height: 40px;">
+                                    <span class="fw-bold">3</span>
+                                </div>
+                                <h5>Praktisch anwenden</h5>
+                                <p class="text-muted">Üben Sie mit konkreten Beispielen und Templates</p>
+                                <a href="{{ url_for('beispiele') }}" class="btn btn-info">Üben</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="display-6 fw-bold mb-4">Bereit, Ihr Prompt Engineering zu verbessern?</h2>
+        <p class="lead mb-4">
+            Entdecken Sie die Kunst der optimalen Prompt-Formulierung und maximieren Sie Ihre KI-Interaktionen
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="{{ url_for('grundlagen') }}" class="btn btn-light btn-lg">
+                <i class="bi bi-rocket me-2"></i>Jetzt starten
+            </a>
+            <a href="{{ url_for('about') }}" class="btn btn-outline-light btn-lg">
+                <i class="bi bi-info-circle me-2"></i>Mehr erfahren
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %} 
