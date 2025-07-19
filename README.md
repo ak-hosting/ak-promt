@@ -4,9 +4,9 @@ Eine moderne, responsive Webseite für den umfassenden Leitfaden zur optimalen P
 
 ## 👨‍💻 **Entwickler & Betreuung**
 
-**Hauptentwickler:** A. Koc (AK Systems)
+**Hauptentwickler:** A. Koc (AK Hosting)
 - **GitHub:** [@ak-hosting](https://github.com/ak-hosting/)
-- **E-Mail:** abdullah.koc@ak-systems.de
+- **E-Mail:** ak@ak-pro.com
 - **Website:** [ak-pro.com](https://ak-pro.com)
 
 **Entwickelt mit Unterstützung von:**
@@ -38,8 +38,8 @@ Eine moderne, responsive Webseite für den umfassenden Leitfaden zur optimalen P
 
 1. **Repository klonen:**
 ```bash
-git clone https://github.com/ak-hosting/prompt-engineering-guide
-cd prompt-engineering-guide
+git clone https://github.com/ak-hosting/ak-promt.git
+cd ak-promt
 ```
 
 2. **Virtuelle Umgebung erstellen:**
@@ -78,7 +78,7 @@ docker run -p 5000:5000 prompt-guide
 ## 📁 **Projektstruktur**
 
 ```
-prompt-engineering-guide/
+ak-promt/
 ├── app.py                 # Flask-Hauptanwendung
 ├── requirements.txt       # Python-Abhängigkeiten
 ├── Dockerfile            # Docker-Konfiguration
@@ -135,7 +135,7 @@ Die Webseite ist vollständig responsive und optimiert für:
 
 ### Heroku
 ```bash
-heroku create prompt-engineering-guide
+heroku create ak-promt
 git push heroku main
 ```
 
@@ -213,7 +213,7 @@ Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details
 Bei Fragen oder Problemen:
 - Erstelle ein Issue auf GitHub
 - Kontaktiere uns über das Kontaktformular
-- E-Mail: abdullah.koc@ak-systems.de
+- E-Mail: ak@ak-pro.com
 
 ## 🎯 **Roadmap**
 
@@ -247,11 +247,11 @@ Bei Fragen oder Problemen:
 
 ## 📊 **Projekt-Status**
 
-![GitHub stars](https://img.shields.io/github/stars/ak-hosting/prompt-engineering-guide)
-![GitHub forks](https://img.shields.io/github/forks/ak-hosting/prompt-engineering-guide)
-![GitHub issues](https://img.shields.io/github/issues/ak-hosting/prompt-engineering-guide)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/ak-hosting/prompt-engineering-guide)
-![GitHub license](https://img.shields.io/github/license/ak-hosting/prompt-engineering-guide)
+![GitHub stars](https://img.shields.io/github/stars/ak-hosting/ak-promt)
+![GitHub forks](https://img.shields.io/github/forks/ak-hosting/ak-promt)
+![GitHub issues](https://img.shields.io/github/issues/ak-hosting/ak-promt)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/ak-hosting/ak-promt)
+![GitHub license](https://img.shields.io/github/license/ak-hosting/ak-promt)
 
 ---
 
